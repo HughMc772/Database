@@ -6,7 +6,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-    width: 75%;
+    width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;

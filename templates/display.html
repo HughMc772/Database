@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block main %}
+    <h2>NBA Players Seasons 1996-2022</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Player Name</td>
+                <td>Team Abbreviation</td>
+                <td>Age</td>
+                <td>Player Height</td>
+                <td>Player Weight</td>
+                <td>College</td>
+                <td>Country</td>
+                <td>Average Points Per Game</td>
+                <td>Average Assists Per Game</td>
+                <td>Average Rebounds Per Game</td>
+                <td>Season</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
