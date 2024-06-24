@@ -21,11 +21,11 @@ def render_home_page():  # put application's code here
     return render_template('base.html')
 
 
-@app.route('/display\<table_type>')
+@app.route('/display/<table_type>')
 def render_display_page(table_type):  # put application's code here
 
     query = ("SELECT player_name, team_abbreviation, age, player_height,"
-             " player_weight, college, country, points, assists, rebounds, season FROM ?")
+             " player_weight, college, country, points, assists, rebounds, season FROM web_tags WHERE type = ?")
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, (table_type, ))
